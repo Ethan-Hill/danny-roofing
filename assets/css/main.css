@@ -14,3 +14,12 @@
   position: absolute;
   width: 100%;
 }
+
+/* Font loading optimization */
+.fonts-loading {
+  font-family: Arial, sans-serif;
+}
+
+.fonts-loaded {
+  font-family: 'Inter', sans-serif;
+}

@@ -79,18 +79,55 @@ export default defineNuxtConfig({
         { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }
       ],
       link: [
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: '' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap' },
+        { 
+          rel: 'preload',
+          as: 'style',
+          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+        },
+        { 
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+          media: 'print',
+          onload: "this.media='all'"
+        },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
         { rel: 'manifest', href: '/manifest.json' },
         { rel: 'apple-touch-icon', href: '/android-chrome-192x192.png' },
         { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#2563eb' }
+      ],
+      script: [
+        {
+          innerHTML: `
+            (function() {
+              // Font loading optimization
+              if ("fonts" in document) {
+                Promise.all([
+                  document.fonts.load("400 1em Inter"),
+                  document.fonts.load("500 1em Inter"),
+                  document.fonts.load("600 1em Inter"),
+                  document.fonts.load("700 1em Inter")
+                ]).then(() => {
+                  document.documentElement.classList.add("fonts-loaded");
+                });
+              }
+            })();
+          `,
+          type: 'text/javascript'
+        }
       ]
     },
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
+    keepalive: true,
+    head: {
+      script: [
+        {
+          children: 'window.crossOriginIsolated = true;',
+          type: 'text/javascript'
+        }
+      ]
+    }
   },
 
   runtimeConfig: {
@@ -112,7 +149,7 @@ export default defineNuxtConfig({
         Sitemap: (process.env.NUXT_PUBLIC_SITE_URL || 'https://danny-roofing.vercel.app') + '/sitemap.xml'
       }
     ]
-  } as any,
+  },
 
   sitemap: {
     siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://danny-roofing.vercel.app',
