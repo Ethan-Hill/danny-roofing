@@ -12,7 +12,7 @@
             class="bg-gray-100"
           />
           <div class="ml-4">
-            <h4 class="font-semibold dark:text-black">{{ testimonial.name }}</h4>
+            <h3 class="font-semibold dark:text-black">{{ testimonial.name }}</h3>
             <p class="text-gray-600">{{ testimonial.location }}</p>
           </div>
         </div>

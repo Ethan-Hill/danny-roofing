@@ -15,6 +15,7 @@
               color="white"
               variant="ghost"
               class="hover:scale-110 transition-transform"
+              :aria-label="social.label"
             />
           </div>
         </div>
@@ -58,7 +59,7 @@
       </div>
 
     </div>
-      <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+      <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-300">
         <p>&copy; {{ new Date().getFullYear() }} D&A Roofing Solutions. All rights reserved.</p>
       </div>
   </footer>
@@ -72,9 +73,9 @@ const quickLinks = [
 ]
 
 const socials = [
-  { icon: 'i-simple-icons-facebook' },
-  { icon: 'i-simple-icons-twitter' },
-  { icon: 'i-simple-icons-instagram' },
-  { icon: 'i-simple-icons-linkedin' }
+  { icon: 'i-simple-icons-facebook', label: 'Facebook' },
+  { icon: 'i-simple-icons-twitter', label: 'Twitter' },
+  { icon: 'i-simple-icons-instagram', label: 'Instagram' },
+  { icon: 'i-simple-icons-linkedin', label: 'LinkedIn' }
 ]
 </script>

@@ -119,7 +119,7 @@
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Roofing Project?</h2>
-          <p class="text-xl mb-8 text-white/90">Contact us today for a free consultation and estimate</p>
+          <p class="text-xl mb-8 text-white">Contact us today for a free consultation and estimate</p>
           <UButton
             size="xl"
             color="white"

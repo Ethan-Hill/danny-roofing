@@ -15,7 +15,7 @@
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 -mt-16 relative z-10">
         <UCard v-for="stat in stats" :key="stat.label" class="text-center">
-          <h3 class="text-3xl md:text-4xl font-bold text-primary-600">{{ stat.value }}</h3>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary-600">{{ stat.value }}</h2>
           <p class="text-gray-600 dark:text-gray-400 mt-2">{{ stat.label }}</p>
         </UCard>
       </div>

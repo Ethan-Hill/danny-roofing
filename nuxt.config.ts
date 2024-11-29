@@ -34,6 +34,9 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en'
+      },
       title: 'D&A Roofing Solutions',
       meta: [
         { charset: 'utf-8' },
