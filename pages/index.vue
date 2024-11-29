@@ -136,6 +136,66 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useHead } from '#imports'
+
+// SEO Configuration with JSON-LD
+useHead({
+  title: 'D&A Roofing Solutions - Professional Roofing Services',
+  meta: [
+    {
+      name: 'description',
+      content: 'Transform your property with expert roofing solutions. Professional installations, repairs, and maintenance services for residential and commercial properties.'
+    },
+    {
+      property: 'og:image',
+      content: '/images/home-hero.jpg'
+    },
+    {
+      name: 'keywords',
+      content: 'roofing, roof repair, roof installation, commercial roofing, residential roofing, roof maintenance, professional roofers'
+    }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        '@id': 'https://danny-roofing.vercel.app',
+        name: 'D&A Roofing Solutions',
+        image: 'https://danny-roofing.vercel.app/images/logo.png',
+        description: 'Professional roofing services for residential and commercial properties. Expert installations, repairs, and maintenance services.',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '123 Main Street',
+          addressLocality: 'Your City',
+          addressRegion: 'ST',
+          postalCode: '12345',
+          addressCountry: 'US'
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 40.7128,
+          longitude: -74.0060
+        },
+        url: 'https://danny-roofing.vercel.app',
+        telephone: '+1-234-567-8900',
+        areaServed: ['Your City', 'Surrounding Areas'],
+        sameAs: [
+          'https://facebook.com/dandaroofing',
+          'https://instagram.com/dandaroofing'
+        ]
+      })
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://danny-roofing.vercel.app'
+    }
+  ]
+})
 
 const bgPattern = ref('PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMSI+PHBhdGggZD0iTTM2IDM0di00aC0ydjRoLTR2Mmg0djRoMnYtNGg0di0yaC00em0wLTMwVjBoLTJ2NGgtNHYyaDR2NGgyVjZoNFY0aC00ek02IDM0di00SDR2NEgwdjJoNHY0aDJ2LTRoNHYtMkg2ek02IDRWMEg0djRIMHYyaDR2NGgyVjZoNFY0SDZ6Ii8+PC9nPjwvZz48L3N2Zz4=')
 

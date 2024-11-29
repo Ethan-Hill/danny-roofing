@@ -87,6 +87,42 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import { useHead } from '#imports'
+
+// SEO Configuration
+useHead({
+  title: 'Contact D&A Roofing Solutions | Get a Free Quote',
+  meta: [
+    {
+      name: 'description',
+      content: 'Contact D&A Roofing Solutions for all your roofing needs. Get a free quote, schedule a consultation, or request emergency roofing services. Available 24/7 for your roofing emergencies.'
+    },
+    {
+      property: 'og:title',
+      content: 'Contact D&A Roofing Solutions | Get a Free Quote'
+    },
+    {
+      property: 'og:description',
+      content: 'Contact D&A Roofing Solutions for all your roofing needs. Get a free quote, schedule a consultation, or request emergency roofing services.'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    },
+    {
+      name: 'keywords',
+      content: 'roofing quote, roofing consultation, emergency roofing service, contact roofer, roofing estimate, roof inspection request'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://danny-roofing.vercel.app/contact'
+    }
+  ]
+})
+
 const loading = ref(false)
 const submitted = ref(false)
 

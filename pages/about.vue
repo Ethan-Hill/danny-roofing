@@ -96,6 +96,35 @@
 </template>
 
 <script setup lang="ts">
+// SEO Configuration
+useHead({
+  title: 'About Us - D&A Roofing Solutions | Your Trusted Roofing Experts',
+  meta: [
+    {
+      name: 'description',
+      content: 'Learn about D&A Roofing Solutions - your trusted local roofing experts. Discover our history, values, and commitment to quality roofing services.'
+    },
+    {
+      property: 'og:title',
+      content: 'About D&A Roofing Solutions - Professional Roofing Services'
+    },
+    {
+      property: 'og:description',
+      content: 'Learn about D&A Roofing Solutions - your trusted local roofing experts. Discover our history, values, and commitment to quality roofing services.'
+    },
+    {
+      name: 'keywords',
+      content: 'about D&A Roofing, roofing company history, professional roofers, roofing experts, local roofing company'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://danny-roofing.vercel.app/about'
+    }
+  ]
+})
+
 const stats = [
   { value: '25+', label: 'Years Experience' },
   { value: '1000+', label: 'Projects Completed' },

@@ -10,8 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/image": "^1.8.1",
     "@nuxt/ui": "^2.14.2",
     "@nuxtjs/color-mode": "^3.3.2",
+    "@nuxtjs/robots": "^5.0.0",
+    "@nuxtjs/sitemap": "^7.0.0",
     "@nuxtjs/supabase": "^1.1.7",
     "@pinia/nuxt": "^0.5.1",
     "@tailwindcss/typography": "^0.5.15",
