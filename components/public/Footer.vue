@@ -44,15 +44,19 @@
           <ul class="space-y-3 text-gray-300">
             <li class="flex items-center">
               <UIcon name="i-heroicons-phone" class="w-5 h-5 mr-2" />
-              (555) 123-4567
+              07920 395119
             </li>
             <li class="flex items-center">
               <UIcon name="i-heroicons-envelope" class="w-5 h-5 mr-2" />
-              info@proroofing.com
+              davidashmore258@gmail.com
             </li>
             <li class="flex items-start">
               <UIcon name="i-heroicons-map-pin" class="w-5 h-5 mr-2 mt-1" />
-              123 Roofing Street,<br>City, State 12345
+              47 Norwood Avenue,<br>
+              Sheffield,<br>
+              South Yorkshire,<br>
+              S5 7DL,<br>
+              England UK
             </li>
           </ul>
         </div>
